@@ -1,0 +1,109 @@
+header {
+    height: 2rem;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #262626;
+    color: lightgray;
+}
+
+@keyframes horizontal-shaking {
+    0% { transform: translateX(0) }
+    25% { transform: translateX(5px) }
+    50% { transform: translateX(-5px) }
+    75% { transform: translateX(5px) }
+    100% { transform: translateX(0) }
+}
+
+main {
+    max-width: 600px;
+    margin: auto;
+}
+
+main.wrong {
+    animation: horizontal-shaking 0.5s 1;
+}
+
+section {
+    margin: auto;
+    width: fit-content;
+}
+
+#results {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.result-row {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.result-row__block {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0.5rem;
+    border: solid lightgray 1px;
+
+    font-size: 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.green {
+    transition: all 0.5s ease-in;
+    background-color: limegreen;
+    color: black;
+}
+
+.yellow {
+    transition: all 0.5s ease-in;
+    background-color: yellow;
+    color: black;
+}
+
+.incorrect {
+    transition: all 0.5s ease-in;
+    background-color: gray;
+    color: white;
+}
+
+#keyboard {
+    margin-top: 2rem;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.25rem;
+}
+
+.keyboard-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    gap: 0.25rem;
+}
+
+.keyboard-row__button {
+    width: 2rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    border: solid lightgray 1px;
+
+    font-size: 1.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+.keyboard-row__button--special {
+    width: 3rem;
+}
